@@ -1,0 +1,437 @@
+<html><head></head><body><div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a href="https://github.com/apache/cordova-plugin-contacts#readme">cordova-plugin-contacts (v2.3.0)</a>
+</h1>
+<h4>Cordova Contacts Plugin</h4>
+<div class="apidocSectionDiv"><a href="#apidoc.tableOfContents" id="apidoc.tableOfContents"><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cordova-plugin-contacts">module cordova-plugin-contacts</a><ol>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cordova-plugin-contacts.</span>contactConsts</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">cordova-plugin-contacts.</span>contactUtils</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cordova-plugin-contacts.contactConsts">module cordova-plugin-contacts.contactConsts</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-contacts.contactConsts.getKindAttributeMap">
+            function <span class="apidocSignatureSpan">cordova-plugin-contacts.contactConsts.</span>getKindAttributeMap
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-contacts.contactConsts.getSubKindAttributeMap">
+            function <span class="apidocSignatureSpan">cordova-plugin-contacts.contactConsts.</span>getSubKindAttributeMap
+            <span class="apidocSignatureSpan">()</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.cordova-plugin-contacts.contactUtils">module cordova-plugin-contacts.contactUtils</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-contacts.contactUtils.invokeErrorCallback">
+            function <span class="apidocSignatureSpan">cordova-plugin-contacts.contactUtils.</span>invokeErrorCallback
+            <span class="apidocSignatureSpan">(errorCallback, code)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-contacts.contactUtils.populateContact">
+            function <span class="apidocSignatureSpan">cordova-plugin-contacts.contactUtils.</span>populateContact
+            <span class="apidocSignatureSpan">(contact)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-contacts.contactUtils.validateContactsPickerFilter">
+            function <span class="apidocSignatureSpan">cordova-plugin-contacts.contactUtils.</span>validateContactsPickerFilter
+            <span class="apidocSignatureSpan">(filter)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-contacts.contactUtils.validateContactsPickerOptions">
+            function <span class="apidocSignatureSpan">cordova-plugin-contacts.contactUtils.</span>validateContactsPickerOptions
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.cordova-plugin-contacts.contactUtils.validateFindArguments">
+            function <span class="apidocSignatureSpan">cordova-plugin-contacts.contactUtils.</span>validateFindArguments
+            <span class="apidocSignatureSpan">(findOptions)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cordova-plugin-contacts" id="apidoc.module.cordova-plugin-contacts">module cordova-plugin-contacts</a></h1>
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cordova-plugin-contacts.contactConsts" id="apidoc.module.cordova-plugin-contacts.contactConsts">module cordova-plugin-contacts.contactConsts</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-contacts.contactConsts.getKindAttributeMap" id="apidoc.element.cordova-plugin-contacts.contactConsts.getKindAttributeMap">
+        function <span class="apidocSignatureSpan">cordova-plugin-contacts.contactConsts.</span>getKindAttributeMap
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getKindAttributeMap = function () {
+    if (!ATTRIBUTE_KIND) {
+        populateKindAttributeMap();
+    }
+
+    return kindAttributeMap;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+var isValid = true,
+    availableFields = {};
+
+if (typeof(filter) === "undefined") {
+    isValid = false;
+} else {
+    if (filter &amp;&amp; Array.isArray(filter)) {
+        availableFields = contactConsts.<span class="apidocCodeKeywordSpan">getKindAttributeMap</span>();
+        filter.forEach(function (e) {
+            isValid = isValid &amp;&amp; Object.getOwnPropertyNames(availableFields).reduce(
+                function (found, key) {
+                    return found || availableFields[key] === e;
+                }, false);
+        });
+    }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-contacts.contactConsts.getSubKindAttributeMap" id="apidoc.element.cordova-plugin-contacts.contactConsts.getSubKindAttributeMap">
+        function <span class="apidocSignatureSpan">cordova-plugin-contacts.contactConsts.</span>getSubKindAttributeMap
+        <span class="apidocSignatureSpan">()</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">getSubKindAttributeMap = function () {
+    if (!ATTRIBUTE_SUBKIND) {
+        populateSubKindAttributeMap();
+    }
+
+    return subKindAttributeMap;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.cordova-plugin-contacts.contactUtils" id="apidoc.module.cordova-plugin-contacts.contactUtils">module cordova-plugin-contacts.contactUtils</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-contacts.contactUtils.invokeErrorCallback" id="apidoc.element.cordova-plugin-contacts.contactUtils.invokeErrorCallback">
+        function <span class="apidocSignatureSpan">cordova-plugin-contacts.contactUtils.</span>invokeErrorCallback
+        <span class="apidocSignatureSpan">(errorCallback, code)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">invokeErrorCallback = function (errorCallback, code) {
+    if (errorCallback) {
+        errorCallback(new ContactError(code));
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-contacts.contactUtils.populateContact" id="apidoc.element.cordova-plugin-contacts.contactUtils.populateContact">
+        function <span class="apidocSignatureSpan">cordova-plugin-contacts.contactUtils.</span>populateContact
+        <span class="apidocSignatureSpan">(contact)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">populateContact = function (contact) {
+    if (contact.name) {
+        contact.name = new ContactName(contact.name);
+    }
+
+    populateFieldArray(contact, "addresses", ContactAddress);
+    populateFieldArray(contact, "organizations", ContactOrganization);
+    populateFieldArray(contact, "emails", ContactField);
+    populateFieldArray(contact, "phoneNumbers", ContactField);
+    populateFieldArray(contact, "faxNumbers", ContactField);
+    populateFieldArray(contact, "pagerNumbers", ContactField);
+    populateFieldArray(contact, "ims", ContactField);
+    populateFieldArray(contact, "socialNetworks", ContactField);
+    populateFieldArray(contact, "urls", ContactField);
+    populateFieldArray(contact, "photos", ContactPhoto);
+    populateFieldArray(contact, "news", ContactNews);
+    populateFieldArray(contact, "activities", ContactActivity);
+    // TODO categories
+
+    populateDate(contact, "birthday");
+    populateDate(contact, "anniversary");
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-contacts.contactUtils.validateContactsPickerFilter" id="apidoc.element.cordova-plugin-contacts.contactUtils.validateContactsPickerFilter">
+        function <span class="apidocSignatureSpan">cordova-plugin-contacts.contactUtils.</span>validateContactsPickerFilter
+        <span class="apidocSignatureSpan">(filter)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function validateContactsPickerFilter(filter) {
+    var isValid = true,
+        availableFields = {};
+
+    if (typeof(filter) === "undefined") {
+        isValid = false;
+    } else {
+        if (filter &amp;&amp; Array.isArray(filter)) {
+            availableFields = contactConsts.getKindAttributeMap();
+            filter.forEach(function (e) {
+                isValid = isValid &amp;&amp; Object.getOwnPropertyNames(availableFields).reduce(
+                    function (found, key) {
+                        return found || availableFields[key] === e;
+                    }, false);
+            });
+        }
+    }
+
+    return isValid;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-contacts.contactUtils.validateContactsPickerOptions" id="apidoc.element.cordova-plugin-contacts.contactUtils.validateContactsPickerOptions">
+        function <span class="apidocSignatureSpan">cordova-plugin-contacts.contactUtils.</span>validateContactsPickerOptions
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function validateContactsPickerOptions(options) {
+    var isValid = false,
+        mode = options.mode;
+
+    if (typeof(options) === "undefined") {
+        isValid = false;
+    } else {
+        isValid = mode === ContactPickerOptions.MODE_SINGLE || mode === ContactPickerOptions.MODE_MULTIPLE || mode === ContactPickerOptions
+.MODE_ATTRIBUTE;
+
+        // if mode is attribute, fields must be defined
+        if (mode === ContactPickerOptions.MODE_ATTRIBUTE &amp;&amp; !validateContactsPickerFilter(options.fields)) {
+            isValid = false;
+        }
+    }
+
+    return isValid;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.cordova-plugin-contacts.contactUtils.validateFindArguments" id="apidoc.element.cordova-plugin-contacts.contactUtils.validateFindArguments">
+        function <span class="apidocSignatureSpan">cordova-plugin-contacts.contactUtils.</span>validateFindArguments
+        <span class="apidocSignatureSpan">(findOptions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function validateFindArguments(findOptions) {
+    var error = false;
+
+    // findOptions is mandatory
+    if (!findOptions) {
+        error = true;
+    } else {
+        // findOptions.filter is optional
+        if (findOptions.filter) {
+            findOptions.filter.forEach(function (f) {
+                switch (f.fieldName) {
+                case ContactFindOptions.SEARCH_FIELD_GIVEN_NAME:
+                case ContactFindOptions.SEARCH_FIELD_FAMILY_NAME:
+                case ContactFindOptions.SEARCH_FIELD_ORGANIZATION_NAME:
+                case ContactFindOptions.SEARCH_FIELD_PHONE:
+                case ContactFindOptions.SEARCH_FIELD_EMAIL:
+                case ContactFindOptions.SEARCH_FIELD_BBMPIN:
+                case ContactFindOptions.SEARCH_FIELD_LINKEDIN:
+                case ContactFindOptions.SEARCH_FIELD_TWITTER:
+                case ContactFindOptions.SEARCH_FIELD_VIDEO_CHAT:
+                    break;
+                default:
+                    error = true;
+                }
+
+                if (!f.fieldValue) {
+                    error = true;
+                }
+            });
+        }
+
+        //findOptions.limit is optional
+        if (findOptions.limit) {
+            if (typeof findOptions.limit !== "number") {
+                error = true;
+            }
+        }
+
+        //findOptions.favorite is optional
+        if (findOptions.favorite) {
+            if (typeof findOptions.favorite !== "boolean") {
+                error = true;
+            }
+        }
+
+        // findOptions.sort is optional
+        if (!error &amp;&amp; findOptions.sort &amp;&amp; Array.isArray(findOptions.sort)) {
+            findOptions.sort.forEach(function (s) {
+                switch (s.fieldName) {
+                case ContactFindOptions.SORT_FIELD_GIVEN_NAME:
+                case ContactFindOptions.SORT_FIELD_FAMILY_NAME:
+                case ContactFindOptions.SORT_FIELD_ORGANIZATION_NAME:
+                    break;
+                default:
+                    error = true;
+                }
+
+                if (s.desc === undefined || typeof s.desc !== "boolean") {
+                    error = true;
+                }
+            });
+        }
+
+        if (!error &amp;&amp; findOptions.includeAccounts) {
+            if (!Array.isArray(findOptions.includeAccounts)) {
+                error = true;
+            } else {
+                findOptions.includeAccounts.forEach(function (acct) {
+                    if (!error &amp;&amp; (!acct.id || window.isNaN(window.parseInt(acct.id, 10)))) {
+                        error = true;
+                    }
+                });
+            }
+        }
+
+        if (!error &amp;&amp; findOptions.excludeAccounts) {
+            if (!Array.isArray(findOptions.excludeAccounts)) {
+                error = true;
+            } else {
+                findOptions.excludeAccounts.forEach(function (acct) {
+                    if (!error &amp;&amp; (!acct.id || window.isNaN(window.parseInt(acct.id, 10)))) {
+                        error = true;
+                    }
+                });
+            }
+        }
+    }
+    return !error;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
+</body></html>
