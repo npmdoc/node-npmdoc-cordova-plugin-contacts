@@ -1,6 +1,6 @@
 # npmdoc-cordova-plugin-contacts
 
-#### api documentation for  [cordova-plugin-contacts (v2.3.0)](https://github.com/apache/cordova-plugin-contacts#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-cordova-plugin-contacts.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-cordova-plugin-contacts) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-cordova-plugin-contacts.svg)](https://travis-ci.org/npmdoc/node-npmdoc-cordova-plugin-contacts)
+#### basic api documentation for  [cordova-plugin-contacts (v2.3.0)](https://github.com/apache/cordova-plugin-contacts#readme)  [![npm package](https://img.shields.io/npm/v/npmdoc-cordova-plugin-contacts.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-cordova-plugin-contacts) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-cordova-plugin-contacts.svg)](https://travis-ci.org/npmdoc/node-npmdoc-cordova-plugin-contacts)
 
 #### Cordova Contacts Plugin
 
@@ -106,7 +106,8 @@
         "test": "npm run jshint"
     },
     "types": "./types/index.d.ts",
-    "version": "2.3.0"
+    "version": "2.3.0",
+    "bin": {}
 }
 ```
 
